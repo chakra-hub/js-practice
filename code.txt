@@ -1,0 +1,108 @@
+1. Swap two numbers without 3 variable
+let a = 10;
+let b = 20;
+
+[a,b]=[b,a]
+console.log(a)
+console.log(b)
+
+
+2.FizzBUzz 
+let input= 20;
+const checkFizz = (input)=>{
+for(let i=1;i<=input;i++){
+if(i%3==0 && i%5==0)console.log('FizzBuzz')
+	else if(i%3==0)console.log('Fizz')
+  else if(i%5==0)console.log('Buzz')
+  else{
+	console.log(i)}
+}
+}
+
+checkFizz(input)
+
+
+3. Captitalize First Letter of String
+let str = 'chakradhar';
+
+function toUpperFirstLetter(str){
+let toUpper = str.replace(str[0], str[0].toUpperCase())
+console.log(toUpper)
+} 
+
+toUpperFirstLetter(str)
+
+4. Star Pattern both 
+for(let i=1; i<=5; i++){
+for(let j=1;j<=i;j++){
+document.write('*')
+}
+document.write('<br>')
+  }
+  
+  for(let i=1; i<5; i++){
+	for(let j=i;j<5;j++){
+  document.write('*')
+  }
+  document.write("<br>")
+  }
+  
+5. Factorial of a number
+function factorial(num){
+let fact = 1;
+for(let i=num;i>0;i--){
+fact = fact * i;
+}
+return fact;
+}
+
+const factfive = factorial(5);
+console.log(factfive)
+
+6. Longest Word in a sentence
+let sentence = 'Web Developement Tutorial for Beginners'
+function maxLengthWord(){
+let arrOfWords = sentence.split(" ");
+let arrLengths = arrOfWords.map((element)=>{
+	return element.length
+})
+let indexMax = arrLengths.indexOf(Math.max(...arrLengths))
+return arrOfWords[indexMax]
+}
+
+let max = maxLengthWord(sentence);
+console.log(max)
+
+
+7. Reverse a string 
+let str = 'hello My name is chakradhar'
+
+let arrOfStr = str.split(' ')
+console.log(arrOfStr)
+arr_length = arrOfStr.length
+let newArr = []
+
+for(let i=0;i<=arr_length-1;i++){
+	newArr.push(arrOfStr[arr_length-i-1])
+}
+console.log(newArr.join(" "))
+
+8. sum(2,3) vs sum(2)(3)
+function sum(x,y){
+return x+y
+}
+
+const two_three = sum(2,3)
+//console.log(two_three)
+
+function sam(a){
+	return function(b){
+  if(b)
+  return sam(a+b);
+  return a
+  }
+}
+
+const sam_three = sam(2)(45)(34)(2)()
+console.log(sam_three)
+
