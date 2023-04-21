@@ -106,3 +106,94 @@ function sam(a){
 const sam_three = sam(2)(45)(34)(2)()
 console.log(sam_three)
 
+
+9. Count the number of Vowels in the string
+let str = 'Umbreallaaa';
+function checkVowels(){
+let strLower = str.toLowerCase();
+let arrOfStr = strLower.split('');
+arrLength = arrOfStr.length
+let count = 0;
+for(let i=0;i<arrLength;i++){
+	if(arrOfStr[i]=='a' || arrOfStr[i]=='e' || arrOfStr[i]=='i' || arrOfStr[i]=='o' || arrOfStr[i]=='u'){
+  	count++;
+  
+}
+}
+return count;
+}
+
+const checkStr = checkVowels(str)
+console.log(checkStr)
+
+
+10. Diff between sum of squares and squares of sum
+let arr = [1,2,3,5,6,7,8,9,10];
+let sumOfSquares = arr.reduce((acc, curr) =>{
+	acc = acc+(curr*curr) 
+  return acc;
+},0)
+
+console.log(sumOfSquares)
+
+let squareOfSum = arr.reduce((acc, curr) =>{
+	acc = (acc+curr);
+  let square = acc*acc
+  return Math.pow(acc,2);
+},0)
+let diff = sumOfSquares - (squareOfSum*squareOfSum) 
+
+console.log(diff)
+
+
+11. Check whether a string has a substring
+let drink = 'Orange Juice'
+let juice = "Juice";
+console.log(drink.includes(juice))
+
+
+12. Deleting a property from an object
+let obj = {
+name:'Chakradhar',
+age: 21
+}
+console.log(obj)
+obj.remove('name')
+console.log(obj)
+
+13. Replace All occurances of a character in a string
+let str = 'Chakradhar Pradhan'
+let replacedByA = str.replace(/a/g, '')
+console.log(replacedByA)
+
+
+14. Ways to append elements to an array
+let arr = ['ram', 'shyam', 'sita', 'gita', 'radha', 'krishna'];
+
+arr.push('Gayatri');
+arr = arr.concat(['Shikha']);
+arr.unshift('Ayushman');
+arr=[...arr,'Hareram']
+console.log(arr)
+
+
+15. Check if an object has a certain property
+let obj = {name:"chakradhar", age:20}
+console.log(obj.hasOwnProperty('sd'))
+
+
+16. Alternate characters in a string should be capitalized
+let str = 'chakradhar';
+
+let arrOfChars = str.split('');
+
+for(let i=0;i<arrOfChars.length;i++){
+if(i%2!==0){
+arrOfChars[i]=arrOfChars[i].toUpperCase()
+}
+}
+
+console.log(arrOfChars.join(''))
+
+
+17. 
