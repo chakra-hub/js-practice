@@ -196,4 +196,58 @@ arrOfChars[i]=arrOfChars[i].toUpperCase()
 console.log(arrOfChars.join(''))
 
 
-17. 
+17. Promise Explaination with code
+
+function createOrder(){
+	return new Promise((resolve, reject)=>{
+  setTimeout(()=>{
+  	resolve("Order Created");
+  },3000);
+  })
+}
+
+function proceedToPayment(){
+	return new Promise((resolve, reject)=>{
+  setTimeout(()=>{
+  const err = new Error("Product Out of Stock");
+  	reject(err);
+  },3000);
+  })
+}
+
+function showOrder(){
+	return new Promise((resolve, reject)=>{
+  setTimeout(()=>{
+  	resolve("Payment successful. Order Placed");
+  },3000);
+  })
+}
+
+function updateWallet(){
+	return new Promise((resolve, reject)=>{
+  setTimeout(()=>{
+  	resolve("Updated Wallet Balence is Rs. 147");
+  },3000);
+  })
+}
+
+
+const order = createOrder()
+.then((orderStatus)=>{
+	console.log(orderStatus)
+})
+.then(proceedToPayment)
+.then((orderSum)=>{
+ console.log(orderSum);
+})
+.then(showOrder)
+.then((payStats)=>{
+console.log(payStats)
+})
+.then(updateWallet)
+.then((bal)=>{
+	console.log(bal)
+})
+.catch((err)=>{
+console.log(err.message)
+})
