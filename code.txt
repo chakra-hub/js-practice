@@ -251,3 +251,134 @@ console.log(payStats)
 .catch((err)=>{
 console.log(err.message)
 })
+
+
+18. Reverse string without inbuilt functions
+let str = "This is my laptop Chakradhar"
+let result =""
+for(let i=str.length-1;i>=0;i--){
+	result = result+str[i];
+}
+console.log(result)
+
+
+19. Find factorial of user input number
+let num = 6;
+let fact = 1;
+
+for(let i=1;i<=num;i++){
+	fact=fact*i;
+}
+console.log(fact)
+
+20. Anagram
+let str1 = 'Mary';
+let str2 = 'Army';
+
+let str1arr= [...str1.toLowerCase()];
+let str2arr= [...str2.toLowerCase()];
+
+console.log(str1arr.sort().join()==str2arr.sort().join())
+console.log(str1arr.sort().join(""))
+
+
+20. Palindrom (len/2 method)
+let str = 'mkajdfladam';
+let len = str.length;
+for(let i=0; i<len/2; i++){
+	if(str[i]!==str[len-1-i]){
+  console.log('not palindrom')
+  }
+  else{
+ 	console.log('palindrom')
+  }
+}
+
+
+21. Palindrome reverse method
+let str = 'madam';
+let len = str.length;
+console.log(str.split("").reverse().join("")==str)
+
+
+22. Longest word in a string
+let str = "supriya is a masooooom good girl"
+let arrOfStr = str.split(' ');
+let max_length=0;
+let max_index=0;
+for(let i=0; i<arrOfStr.length-1; i++){
+	if(arrOfStr[i].length>max_length){
+  	max_length=arrOfStr[i].length;
+    max_index=i;
+  }
+}
+
+console.log("longest word is ",arrOfStr[max_index] )
+
+
+23. Longest word in a string using sort() method.
+let str = "supriya is a masooooom good girl"
+let sortStr = str.split(" ").sort((a,b)=>{
+return b.length-a.length
+})
+
+console.log(sortStr[0])
+
+
+24. Count of Vowels in the string
+let vowels=["a","i","e","o","u"]
+var str ="Chakradhar Pradhan I love you"
+let obj = {}
+for(var letter of str.toLowerCase())
+{
+if(vowels.includes(letter)){
+	if(obj[letter]){
+  obj[letter]++;
+  }else{
+  obj[letter]=1
+  }
+}
+}
+
+25. Check the occurence of a character in a given string.
+function checkOccurences(str, character){
+let count = 0;
+for(letter of str){
+if(letter == character){
+count++;
+}
+}
+console.log(count)
+}
+
+checkOccurences("Hello Dude is eat okaye", 'e')
+
+
+26. Fibonacci Number 
+let n1 = 0, n2 = 1, num, nextTerm, arr=[];
+num=5
+arr.push(n1);
+arr.push(n2);
+for(let i=0; i<num; i++){
+	nextTerm = n1+n2;
+  n1=n2;
+  n2= nextTerm;
+  arr.push(nextTerm);
+}
+
+console.log(arr)
+
+
+27. Finding Missing Number in an Array.
+let arr = [2,4,6,8,12];
+let diff = arr[1]-arr[0];
+let missing_no = '';
+for(let i = 0; i<arr.length-1; i++){
+if(arr[i+1]!==arr[i]+diff){
+	missing_no = arr[i]+diff;
+}
+}
+console.log(missing_no)
+
+
+28. 
