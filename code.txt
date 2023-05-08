@@ -381,4 +381,55 @@ if(arr[i+1]!==arr[i]+diff){
 console.log(missing_no)
 
 
-28. 
+28. Sort a string
+let str = "Chakradhar"
+const sorted_str = str.toLowerCase().split("").sort().join("");
+console.log(sorted_str)
+
+
+29. Sorted an array of numbers
+let num = [1,5,2,9,3,84,845,3,5,2]
+const sorted_num = num.sort((a,b)=>a-b)
+console.log(sorted_num)
+
+
+30. Check a number is prime or not
+let num = 12;
+function isPrime(num){
+	if(num<2){
+	return ('not prime');
+}
+else{
+	for(let i=2;i<num;i++){
+  if(num%i===0){
+  return ('not prime')
+  }
+  }
+  return ("prime")
+}
+}
+
+isPrime(num)
+
+
+31. To print all numbers from 2 to 100
+for(let i=2;i<=100;i++){
+console.log(i)}
+
+let i=2;
+while(i<=100){
+console.log(i)
+i++;
+}
+
+
+32. Find duplicates from two arrays and store it into a third array.
+const arr1 = [1,3,4,2,4,67,4,3,7,3];
+const arr2 = [0, 0, 1, 5, 3,7,3,5,1,0]
+
+const concat_arr = arr1.concat(arr2);
+let new_set = new Set(concat_arr);
+console.log([...new_set])
+
+
+
