@@ -431,5 +431,61 @@ const concat_arr = arr1.concat(arr2);
 let new_set = new Set(concat_arr);
 console.log([...new_set])
 
+34: Write a program that prints the numbers from 1 to 100. But for multiples of three, print "Fizz" instead of the number, and for the multiples of five, print "Buzz". 
+For numbers which are multiples of both three and five, print "FizzBuzz"
+
+for(let i=1;i<=100;i++){
+	if(i%3==0 && i%5==0){
+  	console.log('FizzBuzz')
+  }
+  else if(i%3==0){
+  	console.log('Fizz');
+  }
+  else if(i%5==0){
+  	console.log('Buzz')
+  }
+  else{
+  console.log(i)
+  }
+}
 
 
+35. Uppercase of each first letter of a words 
+const sentence='i am a good boy';
+
+const arrOfWords = sentence.split(' ');
+const newArrOfWords = []
+for(let i=0; i<arrOfWords.length;i++){
+newArrOfWords.push(arrOfWords[i][0].toUpperCase()+arrOfWords[i].slice(1,arrOfWords[i].length))
+}
+console.log(newArrOfWords.join(' '))
+
+
+36. To check ending of the string with given character/s using inbuild function
+function checkEnding(word, ending){
+if(word.split("")[word.length-1]==ending){
+console.log('true')
+}
+else{
+console.log('false')
+}
+}
+
+checkEnding('Chakra', 'a')
+
+37. To find the largest elements fro the 2 dimensional array 
+let givenArray = [[1,2,3,4],[5,6,7,9],[45,76,2,1],[89,90,87,9]];
+
+let max = givenArray[0][0];
+
+for(let i=0;i<givenArray.length;i++){
+	for(let j=0;j<givenArray[i].length;j++){
+  	if(givenArray[i][j]>max){
+    max = givenArray[i][j];
+    }
+  }
+}
+
+console.log(max)
+
+38. 
